@@ -1,6 +1,6 @@
 # rest-euler
 
-A project for solving different Euler problems in Clojure. 
+A project for solving differentprogramming problems in Clojure. 
 
 ## Usage
 

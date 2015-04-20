@@ -1,4 +1,3 @@
 # euler
-Project for Euler solutions in different programming languages. 
-See https://projecteuler.net/
+Project for solving various problems in different programming languages.
 
