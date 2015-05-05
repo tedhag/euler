@@ -5,6 +5,7 @@
 (def fibonacci
   ;;With an anonymus function that takes a pair [a b] in vector and 
   ;;returns a new pair with [b (+ a b)].
+  ;;We iterate over that function, i.e the output from fn is the new input.
   ;;The first position in each pair is the Fibonacci sequence
   ;;that is map(ped) to a new lazy sequence
   (map first 
@@ -19,5 +20,4 @@
           :while (< n 4000000)] n)))
 
 (defn solve [id]
-  (str "Solved UC " id ": Result is: " 
-    (even_fibonacci)))
+  (str "Solved UC " id ": Result is: " (even_fibonacci)))
