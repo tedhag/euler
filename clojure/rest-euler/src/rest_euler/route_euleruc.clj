@@ -7,13 +7,11 @@
              [rest-euler.uceuler1 :as uc1]
              [rest-euler.uceuler2 :as uc2]))
 
-
 (defn router [id] 
   (case id;id as string
       "1" (uc1/solve id)
       "2" (uc2/solve id)
       "Not implemented yet!"))
-
 
 (defresource id [id]
   :available-media-types ["text/html" "application/json"]

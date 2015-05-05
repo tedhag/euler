@@ -1,6 +1,6 @@
 (ns rest-euler.ucgetrootpage
   
-  "Use Case for getting root page information, i.e not real data delivery"
+  "Use Case for getting root page information, i.e no real data delivery"
   
   (:gen-class)
   (:require  [liberator.core :refer [defresource]]))

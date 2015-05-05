@@ -6,13 +6,11 @@
   (:gen-class)
   (:require [compojure.core :refer [defroutes GET]]
             [rest-euler.ucgetrootpage :as root]
-            [rest-euler.route-euleruc :as euler]
-            ))
+            [rest-euler.route-euleruc :as euler]))
 
 (defroutes routes
   (GET "/" [] (root/getrootpage))
-  (GET "/uc/:id" [id] (euler/id id))
-  )
+  (GET "/uc/:id" [id] (euler/id id)))
 
 (def handler
   (-> routes))
