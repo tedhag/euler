@@ -1,8 +1,6 @@
 (ns rest-euler.uceuler1
-
-"Use Case for problem id:1"
-
-(:gen-class))
+  "Use Case for problem id:1"
+  (:gen-class))
 
 (def numbers (range 1000))
 

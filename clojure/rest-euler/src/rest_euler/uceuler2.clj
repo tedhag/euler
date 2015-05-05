@@ -2,8 +2,14 @@
   "Use Case for problem id:2"
   (:gen-class))
 
-(def fibonacci 
-  (map first (iterate (fn [[a b]] [b (+ a b)]) [0 1])))
+(def fibonacci
+  ;;With an anonymus function that takes a pair [a b] in vector and 
+  ;;returns a new pair with [b (+ a b)].
+  ;;The first position in each pair is the Fibonacci sequence
+  ;;that is map(ped) to a new lazy sequence
+  (map first 
+    (iterate 
+      (fn [[a b]] [b (+ a b)]) [0 1])))
 
 (defn even_fibonacci [] 
   (reduce + 
