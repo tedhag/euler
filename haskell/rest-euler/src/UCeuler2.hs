@@ -10,7 +10,7 @@ module UCeuler2
 -- The $ operator is for avoiding parenthesis. Anything appearing 
 -- after it will take precedence over anything that comes before.  
 fibonacci :: [Integer]
-fibonacci = map fst $ (iterate (\(a,b) -> (b,a+b)) (0,1))
+fibonacci = map fst $ iterate (\(a,b) -> (b,a+b)) (0,1)
 
 -- create new lazy list of even fibonacci numbers
 even_fibonacci :: [Integer]
