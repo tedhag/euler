@@ -2,8 +2,8 @@ module UCeuler2
 ( solve
 ) where
 
--- With an anonymus function that takes a pair (a, b) in list and 
--- returns a new pair with (b (+ a b)).
+-- With an anonymus function that takes a pair (a, b) in a tuple and 
+-- returns a new tuple with (b (+ a b)).
 -- We iterate over that function, i.e the output is the new input.
 -- The first position in each pair is the Fibonacci sequence
 -- that is map(ped) to a new lazy sequence
