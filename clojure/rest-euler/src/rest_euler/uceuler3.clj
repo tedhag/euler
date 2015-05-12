@@ -45,5 +45,4 @@
   (reduce max (prime-factors n)))
 
 (defn solve [id]
-  ;;(str "Solved UC " id ": Result is: " (largest_prime_factor 600851475143)))
-  (str "Solved UC " id ": Result is: " (pprimes 90)))
+  (str "Solved UC " id ": Result is: " (largest_prime_factor 600851475143)))
