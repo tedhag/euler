@@ -3,7 +3,7 @@
   (:gen-class))
 
 
-;; There is of course an way to generate a lazy-list of infinte prime numbers, 
+;; There is of course a way to generate a lazy-list of infinte prime numbers, 
 ;; but that is to be solved later...
 (def primes 
   ;; reduce is used as (reduce f val coll). 
