@@ -38,7 +38,8 @@
     ;; 'coll'
     ;; From the primes collection we use take-while (take-while pred coll)
     ;; Using an anonymus function that gives all primes multiplied with it self
-    ;; and that are less than n (Perfect Squares at http://en.wikipedia.org/wiki/Prime_factor)
+    ;; and that are less than n 
+    ;; (Perfect Squares at http://en.wikipedia.org/wiki/Prime_factor)
     (take-while #(> n (* % %)) primes)))
 
 (defn largest_prime_factor [n] 
