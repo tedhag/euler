@@ -4,14 +4,14 @@ module UCeuler3
 
 import Primes
 
-
--- (Perfect Squares at http://en.wikipedia.org/wiki/Prime_factor)
--- x is the variable from primes that is multiplied with it self
--- and less then n
-perfect_squares n = takeWhile (\x -> x^2 < n) primes
+-- 
+perfect_squares n = takeWhile (< i) primes
+    where i = round . sqrt . fromIntegral $ n
 
 
-prime_factors n = filter (\x -> x `rem` n ==0) primes
+largestPrimeFactor :: Integer -> Integer
+largestPrimeFactor n =
+    maximum (filter (\x -> ((n `mod` x) == 0)) (perfect_squares n))
 
 solve :: Int -> [Char]
-solve ucid = "Solved UC "++show(ucid)++": Result is: "++show(prime_factors 100)
+solve ucid = "Solved UC "++show(ucid)++": Result is: "++show(largestPrimeFactor 600851475143)
