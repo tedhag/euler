@@ -24,7 +24,7 @@ perfect_squares n = takeWhile (< i) primes
 prime_factors n = filter (\x -> ((n `mod` x) == 0)) (perfect_squares n)
 
 largest_prime_factor :: Integer -> Integer
-largest_prime_factor n = maximum prime_factors n
+largest_prime_factor n = maximum (prime_factors n)
 
 solve :: Int -> [Char]
-solve ucid = "Solved UC "++show(ucid)++": Result is: "++show(largest_prime_factor 13195)
+solve ucid = "Solved UC "++show(ucid)++": Result is: "++show(largest_prime_factor 600851475143)
