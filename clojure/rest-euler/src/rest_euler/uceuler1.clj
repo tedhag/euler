@@ -5,8 +5,8 @@
 (def numbers (range 1000))
 
 (defn multiples-of-3-and-5 []
-(reduce + 
-  (for [n numbers 
+  (reduce + 
+    (for [n numbers 
         :let [m3 (mod n 3) 
               m5 (mod n 5)]
         :when (or (= m3 0) (= m5 0))] n)))
