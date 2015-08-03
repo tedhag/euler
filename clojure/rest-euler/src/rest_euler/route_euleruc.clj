@@ -7,7 +7,8 @@
              [rest-euler.uceuler1 :as uc1]
              [rest-euler.uceuler2 :as uc2]
              [rest-euler.uceuler3 :as uc3]
-             [rest-euler.uceuler4 :as uc4]))
+             [rest-euler.uceuler4 :as uc4]
+             [rest-euler.uceuler5 :as uc5]))
 
 (defn router [id] 
   (case id;id as string
@@ -15,6 +16,7 @@
       "2" (uc2/solve id)
       "3" (uc3/solve id)
       "4" (uc4/solve id)
+      "5" (uc5/solve id)
       "Not implemented yet!"))
 
 (defresource id [id]
