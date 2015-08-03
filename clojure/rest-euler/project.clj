@@ -12,7 +12,7 @@
                  [ring/ring-json "0.3.1"]
                  [ring-cors "0.1.6"]
                  [cheshire "5.4.0"]]
-  :local-repo "D:/maven/repo/clojure"
+  :local-repo "../../repo/"
   :main ^:skip-aot rest-euler.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
