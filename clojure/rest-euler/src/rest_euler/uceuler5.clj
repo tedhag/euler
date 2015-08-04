@@ -2,22 +2,27 @@
   "Use Case for problem id:5." 
   (:gen-class))
 
-(def divisors 
-  (range 1 11))
+;; Solved using LCM - Least Common Multiple
 
-(defn evenly-divisable? [x]
-  (if (= 0
-        (reduce + 
-          (for [n divisors
-            :let [y (mod x n)]
-            ;; check for not evenly divisable
-            :when (not= y 0)] y))) x))
+;; gcd - greatest common divisor (using Euclid's algorithm)
+;; gcd(a,b) = gcd(b, a mod b)
+;; To compute gcd(48,18), divide 48 by 18 to 
+;, get a quotient of 2 and a remainder of 12.
+;; Then divide 18 by 12 to get a quotient of 1 
+;; and a remainder of 6. 
+;; Then divide 12 by 6 to get a remainder of 0, 
+;; which means that 6 is the gcd.
+;; The if-statement is not necessary when there are
+;; no 'zeros' 
+(defn gcd [a b] 
+  (if (zero? b) a (recur b (mod a b))))
 
-;;take the second value as the first is 0
-(defn smallest-even-divisable []
-  (second (filter evenly-divisable? (range))))
+;; lcm = a*b / gcd(a,b)
+(defn lcm [a b] (/ (* a b) (gcd a b)))
+
+(defn smallest-even-divisable [] 
+  (reduce #(lcm %1 %2) (range 1 21)))
 
 (defn solve [id]
   (str "Solved UC " id ": Result is: " 
-    ;;(evenly-divisable? 2520)))
     (smallest-even-divisable)))
